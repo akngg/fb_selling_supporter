@@ -26,14 +26,14 @@ const slides = [
   },
 ];
 
-export default function Onboarding() {
+export default function Onboarding(props: any) {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const handleNext = () => {
-    if (currentIndex < slides.length - 1) {
+    if (currentIndex < slides.length - 2) {
       setCurrentIndex(currentIndex + 1);
     } else {
-      alert("Onboarding completed!");
+      props.passOnboarding();
     }
   };
 
@@ -52,7 +52,7 @@ export default function Onboarding() {
       </View>
 
       {/* Nút điều hướng */}
-      <View style={currentIndex == slides.length - 1 ? styles.hiddenfooter: styles.footer}>
+      <View style={currentIndex == slides.length - 1 ? styles.hiddenfooter : styles.footer}>
         {currentIndex > 0 && (
           <TouchableOpacity style={styles.button} onPress={handleBack}>
             <Text style={styles.buttonText}>Back</Text>
@@ -107,6 +107,13 @@ const styles = StyleSheet.create({
     width: "100%",
   },
   button: {
+    backgroundColor: "#007bff",
+    padding: 10,
+    borderRadius: 5,
+    minWidth: 80,
+    alignItems: "center",
+  },
+  left_button: {
     backgroundColor: "#007bff",
     padding: 10,
     borderRadius: 5,

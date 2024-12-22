@@ -5,17 +5,18 @@
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
-    "scheme": "myapp",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "io.expo.fbsellingsupporter"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.shadommc.fb_selling_supporter"
     },
     "web": {
       "bundler": "metro",
@@ -32,7 +33,21 @@
           "resizeMode": "contain",
           "backgroundColor": "#ffffff"
         }
-      ]
+      ],
+      [
+        "react-native-fbsdk-next",
+        {
+          "appID": "532015669635491",
+          "clientToken": "6685435256334725a73b6b0b8e5eb4a6",
+          "displayName": "Login Tut",
+          "scheme": "fb532015669635491",
+          "advertiserIDCollectionEnabled": false,
+          "autoLogAppEventsEnabled": false,
+          "isAutoInitEnabled": false,
+          "androidUserTrackingPermission": ""
+        }
+      ],
+      "expo-facebook"
     ],
     "experiments": {
       "typedRoutes": true
@@ -44,6 +59,14 @@
       "eas": {
         "projectId": "7feed3bb-9c76-4971-8b36-089ead06f3c7"
       }
-    }
+    },
+    "runtimeVersion": "exposdk:52.0.18",
+    "updates": {
+      "url": "https://u.expo.dev/7feed3bb-9c76-4971-8b36-089ead06f3c7"
+    },
+    "scheme": [
+      "facebookLogin",
+      "fb532015669635491"
+    ]
   }
 }
