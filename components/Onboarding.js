@@ -26,7 +26,7 @@ const slides = [
   },
 ];
 
-export default function Onboarding(props: any) {
+export default function Onboarding(props) {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const handleNext = () => {

@@ -1,7 +1,8 @@
 import App from '@/components/App';
 
-export default async function Index() {
+export default function Index() {
   return (
-    <App />
+    <App/>
   );
 }
+
